@@ -2,84 +2,192 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Home | COMP1002 HTML, CSS, and JS Fundamentals</title>
-		<meta name="author" content="Zackary Zulak" />
-		<meta name="description" content="A concise and accurate summary of the document content is to appear here">
-		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-		<link rel="stylesheet" href="css/styles.css" />
-		<!-- STEP 1: Save this file as index.php instead of index.html -->
-		<!-- STEP 2: Connect to your Web server, and upload all of the files in this lab to a new folder called 'lab4' inside the 'week4' directory we created during this week's lesson -->
-		<!-- STEP 3: Make sure that you can browse to this page on the server - the URL that you would have to enter into the address bar in a browser might look something like https://mysitename.azurewebsites.net/week4/lab4/index.php (for Microsoft Azure) -->
+		<title>Order A Pizza - Pizza Time Pizza</title>
 	</head>
 	<body>
-		<!-- Page-level header -->
 		<header>
-			<h1>HTML, CSS, and JS Fundamentals</h1>
-			<h2>Building Blocks for Web Developers</h2>
+			<h1>Pizza Time Pizza</h1>
 		</header>
-		<!-- Page-level main content -->
 		<main>
-			<!-- News Section -->
-			<section>
-				<h3>Building Blocks In The News</h3>
-				<!-- First Article -->
-				<article>
-					<h4>Latest Research Reveals Building Blocks are Cool</h4>
-					<p>by Blocky Blockhead<br /><time datetime="2018-03-29">March 29, 2018</time></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing. Platea dictumst vestibulum rhoncus est pellentesque. Read more…</p>
-				</article>
-				<article>
-					<h4>Building Blocks Aren’t Just For Kids</h4>
-					<p>by Rectangle Square<br /><time datetime="2017-06-17">June 17, 2017</time></p>
-					<p>Amet risus nullam eget felis eget nunc lobortis. Eget arcu dictum varius duis at consectetur lorem donec. Arcu felis bibendum ut tristique et egestas quis. Turpis tincidunt id aliquet risus feugiat in ante metus. Read more…</p>
-				</article>
-				<article>
-					<h4>Investors Bet Big on Building Block Toys</h4>
-					<p>by Right Angle<br /><time datetime="2018-02-15">February 15, 2018</time></p>
-					<p>At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Arcu cursus euismod quis viverra nibh cras. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Aenean sed adipiscing diam donec adipiscing. Read more…</p>
-				</article>
-			</section>
-			<!-- Side Notes / Related Information -->
-			<aside>
-<!-- STEP 4: Create a pair of FORM tags so that visitors can sign up for a newsletter -->
-<!-- STEP 5: Add an action attribute to the FORM start tag that points to a file called "subscribe.php", and set the method attribute to "get" -->
-<!-- STEP 6: Add an H3 element inside the FORM tags that reads, "Subscribe to Newsletter" -->
+			<form>
+				<!-- Fieldset for personal information -->
+				<fieldset>
+					<legend>Personal Information</legend>
+					<!-- Asking to input first name -->
+					<div>
+						<label for="fname">First Name</label>
+						<input type="text" names="fname" id="fname" size="25" placeholder="type first name here" />
+					</div>
+					<!-- Asking to input Last name -->
+					<div>
+						<label for="lname">Last Name</label>
+						<input type="text" names="lname" id="lname" size="25" placeholder="type last name here" />
+					</div>
+					<!-- Asking to input phone number -->
+					<div>
+						<label for="phone">Phone</label>
+						<input type="tel" name="phone" id="phone" size="25" placeholder="000-000-0000" />
+					</div>
+					<!-- Asking to input email -->
+					<div>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" size="25" placeholder="name@domain.com" />
+					</div>
+					<div>
+						<div>
+							<label for="address">Address</label>
+							<input type="address" name="address" id="address" size="25" placeholder="10 Address Street" />
+					</div>
+				</fieldset>
+				<!-- Fieldset for the pizza -->
+				<fieldset>
+					<legend>Pizza Preferences</legend>
+					<!-- Asking for the number of pizzas -->
+					<div>
+						<label for="quantity">Number of Pizzas</label>
+						<input type="number" name="quantity" id="quantity" />
+					</div>
+					<!-- Asking for the pizza size -->
+					<div>
+						<label for "size">Size</label>
+						<select name="size" id="size">
+							<option value=null>-------</option>
+							<option value="small">Small</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+						</select>
+					</div>
 
-<!-- STEP 7a: Add a LABEL element for the email address -->
+					<div>
+						<legend>Meat Toppings</legend>
+						<!-- Select any 3 different meats -->
+						<input type="checkbox" name="topping1" id="meat1" value="pepperoni" />
+						<label for="meat1">Pepperoni</label>
 
-<!-- STEP 7b: Add an INPUT element for the user to type their email address - set the type of INPUT to "email", add a name attribute that is set to "emailAddress", and an id attribute that is set to "emailAddress" -->
+						<input type="checkbox" name="topping2" id="meat2" value="beef" />
+						<label for="meat2">Beef</label>
 
-<!-- STEP 7c: Add the 'for' attribute to the above LABEL element, and set the value to match the 'id' value of the INPUT element -->
-<!-- STEP 7d: Include the 'required' attribute on the above INPUT element so that users are forced to enter an email address before the form is submitted -->
-<!-- STEP 8a: Add a BUTTON element with the attribute type="submit" -->
+						<input type="checkbox" name="topping3" id="meat3" value="bacon" />
+						<label for="meat3">Bacon</label>
+					</div>
 
-<!-- STEP 8b: Set the content of the BUTTON element to read, "Subscribe" -->
-<!-- STEP 8c: Upload the changed index.php file that you've now edited to the server and refresh the page to view the changes - try adding an email address and submitting the form -->
-<!-- STEP 9: Open up subscribe.php in your code editor and head to STEP 10 -->
+					<div>
+						<legend>Veggie Toppings</legend>
+						<!-- Select any 3 different meats -->
+						<input type="checkbox" name="topping4" id="veg1" value="pepper" />
+						<label for="veg1">Pepper</label>
 
-			<form action="subscribe.php" method="get">
-				<h3>Subscrbe to Newsletter</h3>
-				<label for="emailAddress">Email</label>
-				<input type="email" name="emailAddress" id="emailAddress" required />
+						<input type="checkbox" name="topping5" id="veg2" value="mushroom" />
+						<label for="veg2">Mushroom</label>
 
-				<button type="submit">Submit</button>
+						<input type="checkbox" name="topping6" id="veg3" value="olive" />
+						<label for="veg3">Olive</label>
+					</div>
+
+					<div>
+						<legend>Cheese</legend>
+						<!-- Select between 3 different cheese types -->
+						<input type="radio" name="regCheese" id="regCheese" value="Regular Cheese" />
+						<label for="regCheese">Regular Cheese</label>
+
+						<input type="radio" name="dubCheese" id="dubCheese" value="Double Cheese" />
+						<label for="dubCheese">Double Cheese</label>
+
+						<input type="radio" name="tripCheese" id="tripCheese" value="Triple Cheese" />
+						<label for="tripCheese">Triple Cheese</label>
+					</div>
+
+					<div>
+						<legend>Crust Type</legend>
+						<!-- Select between 3 different crust types -->
+						<input type="radio" name="regCrust" id="regCrust" value="Regular Cheese" />
+						<label for="regCrust">Regular Crust</label>
+
+						<input type="radio" name="stfCrust" id="stfCrust" value="Stuffed Crust" />
+						<label for="stfCrust">Stuffed Crust</label>
+
+						<input type="radio" name="thnCrust" id="thnCrust" value="Thin Crust" />
+						<label for="thnCrust">Thin Crust</label>
+					</div>
+				</fieldset>
+				<!-- Fieldset for inputting credit card info -->
+				<fieldset>
+					<legend>Credit Card Details</legend>
+					<!-- Asking to input preferred credit card -->
+					<div>
+						<input type="radio" name="ccType" id="amex" value="American Express" />
+						<label for="amex">American Express</label>
+
+						<input type="radio" name="ccType" id="mc" value="MasterCard" />
+						<label for="mc">MasterCard</label>
+
+						<input type="radio" name="ccType" id="visa" value="VISA" />
+						<label for="visa">VISA</label>
+					</div>
+					<!-- Asking to input credit card number -->
+					<div>
+						<label for="ccNumber">Credit Card Number</label>
+						<input id="ccNumber" type="text" name="ccNumber" placeholder="0000-0000-0000-0000" />
+					</div>
+					<!-- Asking to input credit card expiration year -->
+					<div>
+						<label for="ccYear">Expiration Year</label>
+						<select name="ccYear" id="ccYear">
+							<option value=null>Expriation Date</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+						</select>
+					</div>
+					<!-- Asking to input credit card expiration month -->
+					<div>
+						<label for="ccMonth">Expiration Month</label>
+						<select name="ccMonth" id="ccMonth">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</div>
+				</fieldset>
+				<!-- Fieldset for feedback -->
+				<fieldset>
+					<div>
+					<legend>Feedback</legend>
+						<label for="comments">Comments</label>
+						<textarea type="comments" name="comments" id="comments" />Type comments here.</textarea>
+					</div>
+				</fieldset>
+
+				<section>
+					<!-- Pizza Picture -->
+					<div>
+					<img src="images/pizza.png" alt="Pizza in a box" height="250" width="350" />
+					<p><small>"KK Pizza" by Nickelodeon, [Public Domain], <a href="https://vignette.wikia.nocookie.net/spongebob/images/1/1e/Vlcsnap-2016-04-29-23h33m54s020.png/revision/latest/scale-to-width-down/350?cb=20160430033640">via Wikipedia</a></small></p>
+					</div>
+					<!-- Complete the order Button -->
+					<div>
+					<button type="submit">Finish Order</button>
+					</div>
+					<!-- Reset Button -->
+					<div>
+					<button type="reset">Reset Order</button>
+					</div>
+				</section>
 			</form>
-
-				<h3>Did You Know…?</h3>
-				<p>One of the most important components of effective life-long learning is <em>play</em>. Learning a new skill (like Web development) should include a certain amount of play. Renowned children’s programming entertainer Mr. Rogers certainly knew about the value that play represented:</p>
-				<!-- Quotation -->
-				<blockquote cite="https://www.brainyquote.com/quotes/fred_rogers_193081">
-					<p>Play is often talked about as if it were a relief from serious learning. But for children, play <em>is</em> serious learning. Play is really the work of childhood. –Fred Rogers</p>
-				</blockquote>
-				<p>Take a little time every day to just <strong>play</strong> with technology – you’ll be surprised how much you learn.</p>
-				<img src="images/mini-figure.png" width="176" height="285" alt="Mini figure">
-			</aside>
-<!-- STEP 10: Make sure all of your HTML code is properly formatted, indenting nested tags with the tab key appropriately. All done! -->
-			<!-- Mini figure by Vanja (Public Domain) https://openclipart.org/detail/224315/clip-is-a-brick-minifig-4 -->
 		</main>
-		<!-- Page-level footer -->
 		<footer>
-			<p><small>© HTML, CSS, and JS Blocks Inc.</small></p>
+			<p><small>PizzaTimePizza Inc. All rights reserved</small></p>
 		</footer>
 	</body>
 </html>
