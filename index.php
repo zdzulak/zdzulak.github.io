@@ -34,7 +34,6 @@
 						<input type="email" name="email" id="email" size="25" placeholder="name@domain.com" />
 					</div>
 					<div>
-						<div>
 							<label for="address">Address</label>
 							<input type="address" name="address" id="address" size="25" placeholder="10 Address Street" />
 					</div>
@@ -58,9 +57,9 @@
 						</select>
 					</div>
 
+					<legend>Meat Toppings</legend>
+					<!-- Select any 3 different meats -->
 					<div>
-						<legend>Meat Toppings</legend>
-						<!-- Select any 3 different meats -->
 						<input type="checkbox" name="topping1" id="meat1" value="pepperoni" />
 						<label for="meat1">Pepperoni</label>
 
@@ -71,9 +70,9 @@
 						<label for="meat3">Bacon</label>
 					</div>
 
+					<legend>Veggie Toppings</legend>
+					<!-- Select any 3 different meats -->
 					<div>
-						<legend>Veggie Toppings</legend>
-						<!-- Select any 3 different meats -->
 						<input type="checkbox" name="topping4" id="veg1" value="pepper" />
 						<label for="veg1">Pepper</label>
 
@@ -84,9 +83,9 @@
 						<label for="veg3">Olive</label>
 					</div>
 
+					<legend>Cheese</legend>
+					<!-- Select between 3 different cheese types -->
 					<div>
-						<legend>Cheese</legend>
-						<!-- Select between 3 different cheese types -->
 						<input type="radio" name="regCheese" id="regCheese" value="Regular Cheese" />
 						<label for="regCheese">Regular Cheese</label>
 
@@ -97,9 +96,9 @@
 						<label for="tripCheese">Triple Cheese</label>
 					</div>
 
+					<legend>Crust Type</legend>
+					<!-- Select between 3 different crust types -->
 					<div>
-						<legend>Crust Type</legend>
-						<!-- Select between 3 different crust types -->
 						<input type="radio" name="regCrust" id="regCrust" value="Regular Cheese" />
 						<label for="regCrust">Regular Crust</label>
 
@@ -165,7 +164,7 @@
 					<div>
 					<legend>Feedback</legend>
 						<label for="comments">Comments</label>
-						<textarea type="comments" name="comments" id="comments" />Type comments here.</textarea>
+						<textarea type="comments" name="comments" id="comments" >Type comments here.</textarea>
 					</div>
 				</fieldset>
 
